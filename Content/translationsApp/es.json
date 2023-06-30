@@ -1,0 +1,137 @@
+{
+  "menu": {
+    "backup": "Copias de seguridad",
+    "commandPrompt": "Simbolo del sistema",
+    "languages": "Idioma",
+    "listBackup": "Lista de copias de seguridad",
+    "logs": "Registros",
+    "retorno": "retorno",
+    "exit": "Salida",
+    "launchBackUp": "Lanzar copias de seguridad",
+    "modeLog": "Mode de logging"
+  },
+  "logging": {
+    "changeMode": "Desea cambiar el modo de registro ({0}) : ",
+    "logtitle": "Tipo de archivo de registro: "
+  },
+  "Komax": {
+    "Komaxtitle": "Prohibición de transferencia simultánea de expedientes de más de"
+  },
+  "cryptoSoft":{
+    "title": "Localización de Cryptosoft :"    
+  },
+  "menuBackup": {
+    "createBackup": "Crear una copia de seguridad",
+    "editBackup": "editar una copia de seguridad",
+    "deleteBackup": "eliminar una copia de seguridad"
+  },
+  "menuLang": {
+    "en": "Ingles",
+    "fr": "Frances",
+    "es": "Espanol",
+    "msgSucces": "idioma cambiado con exito",
+    "languagetitle": "Idiomas"
+  },
+  "listBackup": {
+    "showBackup": "label : {0} \nsource : {1} \ndestination : {2} \ntype : {3}"
+  },
+  "handleBackup": {
+    "inputLabel": "Por favor, escriba una etiqueta {0}: ",
+    "inputLabelSearch": "Por favor, escriba la etiqueta de la copia de seguridad que esta buscando: ",
+    "inputSourceFolder": "Por favor, introduzca la carpeta de origen {0}: ",
+    "inputDestinationFolder": "Especifique la carpeta de destino {0}: ",
+    "inputBackupType": "Especifique el tipo de copia de seguridad (diferencial/completa) {0}: ",
+    "fileStatus": {
+      "backupd": "Copia de seguridad guardada",
+      "deleted": "Backup borrado",
+      "backupException": "Se ha producido un error al guardar el archivo JSON",
+      "deleteException": "Se ha producido un error al borrar el archivo JSON"
+    },
+    "testsException": {
+      "fileAlreadyExistsOrInvalid": "La copia de seguridad con el nombre : {0} existe ya o el nombre : {0} no es valido",
+      "fileDoesntExists": "La copia de seguridad con nombre : {0} no existe",
+      "folderDoesntExists": "La carpeta bajo la ruta : {0} no existe",
+      "wrongEnum": "El tipo de copia de seguridad : {0} no existe (diferencial/completa)",
+      "update": "¿Quieres editar esta copia de seguridad?"
+    }
+  },
+  "console": {
+    "helpGlobal": "Aqui tienes una lista de comandos disponibles:\n'help' = mostrar este menu\n'exit' = salir del s�mbolo del sistema'\n'launchindividual' backupName = lanzar una copia de seguridad individualmente\n-'launchgrouped' backup1;backup2 = lanzar copias de seguridad en grupo puede lanzar en modo multithreading con la opcion :multithreading (pulse cualquier tecla para continuar)",
+    "helpLaunchIndividual": "{0}DOC LAUNCHINDIVIDUAL (pulse cualquier tecla para continuar)",
+    "helpLaunchGrouped": "{0}DOC LAUNCHGROUPED (pulse cualquier tecla para continuar)",
+    "commandNotFound": "Comando: {0} no encontrado (pulse cualquier tecla para continuar)",
+    "progress": {
+      "save": "Guardar: ",
+      "remainingSize": "Numero de bytes restantes: ",
+      "status": "Estado: ",
+      "remainingFiles": "Numero de archivos restantes: "
+    }
+  },
+  "exception": {
+    "json": "[El JSON: {0}.json, esta posiblemente malformado, por favor compruebe su validez]",
+    "directorynotfound": "[No se encontro la carpeta que debia contener el archivo: {0}.json]",
+    "filenotfound": "[No se encontro el archivo: {0}.json, especificado]",
+    "missingTranslation": "[Falta la traduccion {0}]",
+    "invalidMode": "El modo no es valido",
+    "forbiddenAppsRunning": "Actualmente se estan ejecutando las siguientes aplicaciones prohibidas:{0}\n Por favor, ciérralos o deja de guardar."
+  },
+  "btns": {
+    "add": "Añadir",
+    "delete": "Borrar",
+    "save": "Guardar",
+    "launchBackUp": "Iniciar copias de seguridad",
+    "launchStatus": "Status de la copias de seguridad",
+    "backupManagement": "Gestión de copias de seguridad",
+    "settings": "Parámetros",
+    "launch": "Lanzar",
+    "pause": "Pausa",
+    "resume": "Retomar",
+    "stop": "Cancelar",
+    "bannedApps": "Aplicaciones prohibidas",
+    "priority": "Extensiones prioritarias",
+    "crypted": "Extensiones encriptadas"
+  },
+  "headers": {
+    "forbiddenApps": "Aplicaciones prohibidas",
+    "backupManagement": "Copias de seguridad",
+    "launchBackUp": "Lanzar copias de seguridad",
+    "settings": "Paramétros",
+    "launchStatus": "Estado de las copias de seguridad",
+    "priority": "Extensiones prioritarias",
+    "crypted": "Extensiones encriptadas"
+  },
+  "labels": {
+    "backupLabel": "Label",
+    "backupSource": "Source",
+    "backupDestination": "Destination",
+    "backupType": "Type",
+    "extension": "extensión"
+  },
+  "textBlock": {
+    "bannedApp": "Aplicacione prohibida"
+  },
+  "validation": {
+    "sizeName": "El nombre especificado no debe estar vacío.",
+    "alreadyExistingForbiddenApp": "La aplicacione ya existe."
+  },
+  "datagrid": {
+    "headers": {
+      "forbiddenApps": "Aplicaciones prohibidas"
+    }
+  },
+  "workstatus": {
+    "Source": "Origen",
+    "Destination": "Destination",
+    "BackUpName": "Nombre de la copia de seguridad",
+    "BackUpStatus": "Estado de la copia de seguridad",
+    "Progress": "Progreso actual",
+    "RemainingFileCount": "Número de archivos restantes",
+    "RemainingSize": "Número de bytes restante"
+  },
+  "instance": {
+    "instanceAlreadyRunning": "Ya se está ejecutando una instancia de la aplicación."
+  },
+  "messagebox":{
+     "info":"Informacion"
+  }
+}

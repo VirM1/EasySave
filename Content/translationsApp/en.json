@@ -1,0 +1,137 @@
+{
+  "menu": {
+    "backup": "Backups",
+    "commandPrompt": "Command prompt",
+    "languages": "Languages",
+    "listBackup": "List backups",
+    "logs": "Logs",
+    "retour": "return",
+    "exit": "Exit",
+    "launchBackUp": "Launch backup",
+    "modeLog": "Logging mode"
+  },
+  "logging": {
+    "changeMode": "Do you want to change logging mode ({0}) : ",
+    "logtitle": "Log file type: "
+  },
+  "Komax": {
+    "Komaxtitle": "Prohibition of simultaneous transfer of files of more than"
+  },
+  "menuBackup": {
+    "createBackup": "Backup creation",
+    "editBackup": "Edit backup",
+    "deleteBackup": "Delete backup"
+  },
+  "listBackup": {
+    "showBackup": "label : {0} \nsource : {1} \ndestination : {2} \ntype : {3}"
+  },
+  "menuLang": {
+    "en": "English",
+    "fr": "French",
+    "es": "Spanish",
+    "msgSucces": "language changed successfully",
+    "languagetitle": "Languages"
+  },
+  "handleBackup": {
+    "inputLabel": "Input a backup label {0}: ",
+    "inputLabelSearch": "Input the label of the backup you are looking for : ",
+    "inputSourceFolder": "Indicate the source directory {0}: ",
+    "inputDestinationFolder": "Indicate the destination directory {0}: ",
+    "inputBackupType": "Indicate the backup type (differential/complete) {0}: ",
+    "fileStatus": {
+      "backupd": "Backup registered",
+      "deleted": "Backup deleted",
+      "backupException": "An error occured during the backup of the JSON file please check if the directory is accessible.",
+      "deleteException": "An error occured during the deletion of the JSON file please check if the directory is accessible."
+    },
+    "testsException": {
+      "fileAlreadyExistsOrInvalid": "The backup with the label : {0} already exists or the label name is invalid : {0}.",
+      "fileDoesntExists": "The backup with the label : {0} doesn't exist.",
+      "folderDoesntExists": "The directory under the path : {0} doesn't exists.",
+      "wrongEnum": "The backup type : {0} doesn't exists (differential/complete).",
+      "update": "Do you want to edit this backup?"
+    }
+  },
+  "console": {
+    "helpGlobal": "Here is a list of the available commands :\n\n-'help' = shows this menu\n\n-'exit' = exit the command prompt\n\n-'launchindividual' nomSauvegarde = launches a save indivudally\n\n-'launchgrouped' nomSauvegarde1;nomSauvegarde2 = launches grouped saves in order to multithreading add the option ':multithreading' \n\n\n(press any key to continue)",
+    "helpLaunchIndividual": "{0}\nDOC LAUNCHINDIVIDUAL \n(press any key to continue)",
+    "helpLaunchGrouped": "{0}\nDOC LAUNCHGROUPED \n(press any key to continue)",
+    "commandNotFound": "Command: {0} not found (press any key to continue)",
+    "progress": {
+      "save": "Backup : ",
+      "remainingSize": "Number Of Bytes remaining : ",
+      "status": "Status : ",
+      "remainingFiles": "Number of Files remaining : "
+    }
+  },
+  "exception": {
+    "json": "[The JSON : {0}.json, is probably malformed, please check it's validity.]",
+    "directorynotfound": "[The folder supposed to contain the file : {0}.json, wasnt found.]",
+    "filenotfound": "[The specified file : {0}.json, wasn't found.]",
+    "missingTranslation": "[The translation {0} is missing.]",
+    "invalidMode": "The selected mode is invalid",
+    "forbiddenAppsRunning": "There are forbidden apps currently running : {0}\nPlease close these or stop the saving process."
+  },
+  "btns": {
+    "add": "Add",
+    "delete": "Delete",
+    "save": "Save",
+    "launchBackUp": "Launch backups",
+    "launchStatus": "Work status",
+    "backupManagement": "Backup management",
+    "settings": "Settings",
+    "launch": "Launch",
+    "bannedApps": "Banned applications",
+    "pause": "Pause",
+    "resume": "Resume",
+    "stop": "Cancel",
+    "priority": "Critical extensions",
+    "crypted": "Crypted extensions"
+  },
+  "headers": {
+    "forbiddenApps": "Forbidden Applications",
+    "backupManagement": "Backup Management",
+    "launchBackUp": "Launch backups",
+    "settings": "Settings",
+    "launchStatus": "Launch status",
+    "priority": "Critical extensions",
+    "crypted": "Crypted extensions"
+  },
+  "textBlock": {
+    "bannedApp": "Banned Application"
+  },
+  "labels": {
+    "backupLabel": "Label",
+    "backupSource": "Source",
+    "backupDestination": "Destination",
+    "backupType": "Type",
+    "extension": "extension"
+  },
+  "validation": {
+    "sizeName": "The chosen name must contain characters.",
+    "alreadyExistingForbiddenApp": "The chosen app has already been registered."
+  },
+  "datagrid": {
+    "headers": {
+      "forbiddenApps": "Forbidden Applications"
+    }
+  },
+  "workstatus": {
+    "Source": "Source",
+    "Destination": "Destination",
+    "BackUpName": "Backup name",
+    "BackUpStatus": "Backup status",
+    "Progress": "Current progress",
+    "RemainingFileCount": "Remaining files",
+    "RemainingSize": "Remaining Bytes"
+  },
+  "instance": {
+    "instanceAlreadyRunning": "An instance of the application is already running"
+  },
+  "messagebox": {
+    "info":"Information"
+  },
+  "cryptoSoft":{
+    "title": "Cryptosoft's location :"    
+  }
+}

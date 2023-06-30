@@ -1,0 +1,44 @@
+﻿<UserControl x:Class="EasySaveWPF.Views.BannedFilesView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:EasySaveWPF.Views"
+             xmlns:viewmodels="clr-namespace:EasySaveWPF.ViewModels"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Label FontSize="36" HorizontalAlignment="Center" Content="{Binding GridHeader}" Foreground="{DynamicResource btnColor}"/>
+        <DataGrid x:Name="BannedApps" AlternatingRowBackground="Gray" ItemsSource="{Binding Path=BannedApps, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" SelectionMode="Extended" Margin="200,80,50,110" IsReadOnly="True" AutoGenerateColumns="False" HorizontalAlignment="Stretch" 
+   HorizontalContentAlignment="Stretch" 
+   ColumnWidth="*">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Banned app" Binding="{Binding Name}" Foreground="Black" IsReadOnly="false"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <TextBox HorizontalAlignment="Left" Margin="415,350,0,0" Text="{Binding AppName}" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="30"/>
+        <Label Content="{Binding BannedAppTextBlock}" HorizontalAlignment="Left" Margin="322,350,0,0" VerticalAlignment="Top" Height="30" Width="76"/>
+        <Button   x:Name="save_btn" Content="{Binding Path=SaveButton}" HorizontalAlignment="Left" Margin="560,350,0,0" VerticalAlignment="Top" Background="{DynamicResource btnColor}"  Style="{DynamicResource RoundButton}" BorderThickness="1,1,1,1" FontFamily="Bahnschrift SemiBold" Foreground="#FFFBFBFB" Height="28" Width="115" 
+                  Command="{Binding AddForbiddenAppCommand}">
+            <Button.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF020E64" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.BorderBrush>
+        </Button>
+        <Button   x:Name="delete_btn" Content="{Binding Path=DeleteButton}" HorizontalAlignment="Left" Margin="560,280,0,0" VerticalAlignment="Top" Background="{DynamicResource btnColor}"  Style="{DynamicResource RoundButton}" BorderThickness="1,1,1,1" FontFamily="Bahnschrift SemiBold" Foreground="#FFFBFBFB" Height="28" Width="115" 
+                  CommandParameter="{Binding ElementName=BannedApps,Path=SelectedItems}" Command="{Binding DeleteCommand}" >
+            <Button.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF020E64" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.BorderBrush>
+        </Button>
+    </Grid>
+</UserControl>

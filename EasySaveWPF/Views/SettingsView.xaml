@@ -1,0 +1,48 @@
+﻿<UserControl x:Class="EasySaveWPF.Views.SettingsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:EasySaveWPF.Views"
+			 xmlns:viewmodels="clr-namespace:EasySaveWPF.ViewModels"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Label FontSize="36" HorizontalAlignment="Center" Content="{Binding GridHeader}" Foreground="{DynamicResource btnColor}"/>
+
+        <Grid>
+            <TextBlock x:Name="languagetitle" HorizontalAlignment="Left" Margin="290,130,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Bahnschrift SemiBold"  Text="{Binding Path=Languagetitle}"/>
+            <RadioButton x:Name="french" Command="{Binding SwitchTranslationCommand}" CommandParameter="fr" Content="{Binding Path=FrenchButton}" HorizontalAlignment="Left" Margin="300,160,0,0" VerticalAlignment="Top" FontFamily="Bahnschrift SemiBold" Checked="_Refresh" IsChecked="{Binding IsFrSelected}"/>
+            <RadioButton x:Name="english" Command="{Binding SwitchTranslationCommand}" CommandParameter="en" Content="{Binding Path=EnglishButton}" HorizontalAlignment="Left" Margin="300,180,0,0" VerticalAlignment="Top" FontFamily="Bahnschrift SemiBold" IsChecked="{Binding IsEnSelected}"/>
+            <RadioButton x:Name="spanish" Command="{Binding SwitchTranslationCommand}" CommandParameter="es" Content="{Binding Path=SpanishButton}" HorizontalAlignment="Left" Margin="300,200,0,0" VerticalAlignment="Top" FontFamily="Bahnschrift SemiBold" IsChecked="{Binding IsEsSelected}"/>
+        </Grid>
+
+        <Grid>
+            <TextBlock x:Name="logtitle" HorizontalAlignment="Left" Margin="290,230,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Bahnschrift SemiBold"  Text="{Binding Path=Logtitle}"/>
+            <RadioButton x:Name="json" Content="Json" Command="{Binding SwitchSerializerCommand}" CommandParameter="json" HorizontalAlignment="Left" Margin="300,260,0,0" VerticalAlignment="Top" FontFamily="Bahnschrift SemiBold" IsChecked="{Binding IsJsonSelected}"/>
+            <RadioButton x:Name="xml" Content="Xml" Command="{Binding SwitchSerializerCommand}" CommandParameter="xml" HorizontalAlignment="Left" Margin="300,280,0,0" VerticalAlignment="Top" FontFamily="Bahnschrift SemiBold" IsChecked="{Binding IsXmlSelected}"/>
+        </Grid>
+
+        <Grid>
+            <TextBlock x:Name="Komaxtitle" HorizontalAlignment="Left" Margin="290,330,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Bahnschrift SemiBold"  Text="{Binding Path=Komaxtitle}"/>
+            <TextBox HorizontalAlignment="Left" Margin="650,329,0,0" Text="{Binding Path=Komax}" TextWrapping="Wrap" VerticalAlignment="Top" Width="75" Height="16"/>
+            <TextBlock HorizontalAlignment="Left" Margin="725,330,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Bahnschrift SemiBold"  Text="Ko"/>
+        </Grid>
+
+        <Grid>
+            <TextBlock HorizontalAlignment="Left" Margin="290,380,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Bahnschrift SemiBold"  Text="{Binding Path=CryptoSoftTitle}"/>
+            <TextBox HorizontalAlignment="Left" Margin="440,379,0,0" Text="{Binding Path=CryptoSoftLocation}" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Height="16"/>
+            <Button x:Name="openSrc_btn" Content="CRYPT" HorizontalAlignment="Left" Margin="730,375,0,0" 
+                VerticalAlignment="Top" Background="{DynamicResource btnColor}"  Style="{DynamicResource RoundButton}" BorderThickness="1,1,1,1" 
+                FontFamily="Bahnschrift SemiBold" Foreground="#FFFBFBFB" Height="22" Width="50"
+                    Command="{Binding CryptoFileCommand}" RenderTransformOrigin="6.56,2.591">
+                <Button.BorderBrush>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black"/>
+                        <GradientStop Color="#FF020E64" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.BorderBrush>
+            </Button>
+        </Grid>
+    </Grid>
+</UserControl>

@@ -1,0 +1,137 @@
+{
+  "menu": {
+    "backup": "Sauvegardes",
+    "commandPrompt": "Invite de commandes",
+    "languages": "Language",
+    "listBackup": "Lister les sauvegardes",
+    "logs": "Logs",
+    "retour": "retour",
+    "exit": "Quitter",
+    "launchBackUp": "Lancer des sauvegardes",
+    "modeLog": "Mode de logging"
+  },
+  "logging": {
+    "changeMode": "Voulez vous changer de mode de logging ({0}) : ",
+    "logtitle": "Type de fichier de log : "
+  },
+  "Komax": {
+    "Komaxtitle": "Interdiction de transférer en simultané des fichiers de plus de"
+  },
+  "menuBackup": {
+    "createBackup": "Creer une sauvegarde",
+    "editBackup": "Editer une sauvegarde",
+    "deleteBackup": "Effacer une sauvegarde"
+  },
+  "menuLang": {
+    "en": "Anglais",
+    "fr": "Francais",
+    "es": "Espagnol",
+    "msgSucces": "langue changee avec succes",
+    "languagetitle": "Langues"
+  },
+  "listBackup": {
+    "showBackup": "label : {0} \nsource : {1} \ndestination : {2} \ntype : {3}"
+  },
+  "handleBackup": {
+    "inputLabel": "Veuillez ecrire un label {0}: ",
+    "inputLabelSearch": "Veuillez ecrire le label de la sauvegarde que vous cherchez : ",
+    "inputSourceFolder": "Indiquer le dossier source {0}: ",
+    "inputDestinationFolder": "Indiquer le dossier destination {0}: ",
+    "inputBackupType": "Indiquer le type de sauvegarde (differential/complete) {0}: ",
+    "fileStatus": {
+      "backupd": "Sauvegarde enregistree",
+      "deleted": "Sauvegarde effacee",
+      "backupException": "Une erreur est survenue lors de la sauvegarde du fichier JSON",
+      "deleteException": "Une erreur est survenue durant la suppression du fichier JSON"
+    },
+    "testsException": {
+      "fileAlreadyExistsOrInvalid": "La sauvegarde sous le nom : {0} existe deja ou le nom : {0} est invalide.",
+      "fileDoesntExists": "La sauvegarde sous le nom : {0} n'existe pas",
+      "folderDoesntExists": "Le dossier sous le chemin : {0} n'existe pas.",
+      "wrongEnum": "Le type de sauvegarde : {0} n'existe pas (differential/complete)",
+      "update": "Voulez-vous modifier cette sauvegarde ?"
+    }
+  },
+  "console": {
+    "helpGlobal": "Voici une liste des commandes disponibles :\n\n-'help' = affiche ce menu\n\n-'exit' = quitte l'invite de commande'\n\n-'launchindividual' nomSauvegarde = lance une sauvegarde individuellement\n\n-'launchgrouped' nomSauvegarde1;nomSauvegarde2 = lance des sauvegardes groupees vous pouvez lancer en mode multithreading avec l'option :multithreading \n\n\n(appuyez sur n'importe quelle touche pour continuer)",
+    "helpLaunchIndividual": "{0}\nDOC LAUNCHINDIVIDUAL \n\n\n(appuyez sur n'importe quelle touche pour continuer)",
+    "helpLaunchGrouped": "{0}\nDOC LAUNCHGROUPED \n\n\n(appuyez sur n'importe quelle touche pour continuer)",
+    "commandNotFound": "Commande : {0} pas trouvee \n\n\n(appuyez sur n'importe quelle touche pour continuer)",
+    "progress": {
+      "save": "Sauvegarde : ",
+      "remainingSize": "Nombre de Nombre d'octets restants : ",
+      "status": "Statut : ",
+      "remainingFiles": "Nombre de fichiers restants : "
+    }
+  },
+  "exception": {
+    "json": "[Le JSON : {0}.json, est possiblement mal forme, veuillez verifier sa validite.]",
+    "directorynotfound": "[Le dossier cense contenir le fichier : {0}.json, n'a pas ete trouve.]",
+    "filenotfound": "[Le fichier : {0}.json, specifie n'a pas ete trouve.]",
+    "missingTranslation": "[La traduction {0} est manquante.]",
+    "invalidMode": "Le mode est invalide",
+    "forbiddenAppsRunning": "Les applications interdites suivantes sont en cours d'execution : {0}\n Veuillez fermer celles-ci ou alors arrêtez les sauvegarde."
+  },
+  "btns": {
+    "add": "Ajouter",
+    "delete": "Effacer",
+    "save": "Sauvegarder",
+    "launchBackUp": "Lancer des sauvegardes",
+    "launchStatus": "Statut des jobs",
+    "backupManagement": "Gestion des sauvegardes",
+    "settings": "Paramètres",
+    "launch": "Lancer",
+    "bannedApps": "Applications interdites",
+    "pause": "Pause",
+    "resume": "Reprendre",
+    "stop": "Annuler",
+    "priority": "Extensions prioritaires",
+    "crypted": "Extensions cryptées"
+  },
+  "headers": {
+    "forbiddenApps": "Applications interdites",
+    "backupManagement": "Gestion des sauvegardes",
+    "launchBackUp": "Lancer des sauvegardes",
+    "settings": "Paramètres",
+    "launchStatus": "Statut des jobs",
+    "priority": "Extensions prioritaires",
+    "crypted": "Extensions cryptées"
+  },
+  "textBlock": {
+    "bannedApp": "Applications interdites"
+  },
+  "labels": {
+    "backupLabel": "Label",
+    "backupSource": "Source",
+    "backupDestination": "Destination",
+    "backupType": "Type",
+    "extension": "extension"
+  },
+  "validation": {
+    "sizeName": "Le nom précisé ne doit pas être vide.",
+    "alreadyExistingForbiddenApp": "L'application précisée a déjà été entrée et enregistrée."
+  },
+  "datagrid": {
+    "headers": {
+      "forbiddenApps": "Applications interdites"
+    }
+  },
+  "workstatus": {
+    "Source": "Source",
+    "Destination": "Destination",
+    "BackUpName": "Nom de la sauvegarde",
+    "BackUpStatus": "Statut de la sauvegarde",
+    "Progress": "Progrès actuel",
+    "RemainingFileCount": "Nombre de fichiers restants",
+    "RemainingSize": "Nombre d'octets restants"
+  },
+  "instance": {
+    "instanceAlreadyRunning": "Une instance de l'application est déjà en cours d'exécution"
+  },
+  "messagebox": {
+    "info":"Informations"
+  },
+  "cryptoSoft":{
+    "title": "Source de CryptoSoft :"    
+  }
+}

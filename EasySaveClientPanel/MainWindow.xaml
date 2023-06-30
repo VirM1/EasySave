@@ -1,0 +1,33 @@
+﻿<Window x:Class="EasySaveClientPanel.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EasySaveClientPanel"
+        mc:Ignorable="d"
+        Title="ClientPanel" Height="450" Width="800">
+    <Grid>
+
+
+		<ContentControl Content="{Binding SelectedViewModel}"/>
+		<Button x:Name="home_btn" Width="175" VerticalAlignment="Top" Style="{DynamicResource RoundButton}" Margin="15,200,0,0" Height="29" HorizontalAlignment="Left" Foreground="#FFFBFBFB" FontFamily="Bahnschrift SemiBold"
+				Content="Home" CommandParameter="HomeViewModel" Command="{Binding SwitchCommand}" BorderThickness="1,1,1,1" Background="{DynamicResource btnColor}">
+			<Button.BorderBrush>
+				<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+					<GradientStop Color="Black"/>
+					<GradientStop Color="#FF6171F6" Offset="1"/>
+				</LinearGradientBrush>
+			</Button.BorderBrush>
+		</Button>
+		<Button x:Name="launchStatus_btn" Width="175" VerticalAlignment="Top" Style="{DynamicResource RoundButton}" Margin="15,260,0,0" Height="29" HorizontalAlignment="Left" Foreground="#FFFBFBFB" FontFamily="Bahnschrift SemiBold"
+				Content="Launch Status" CommandParameter="StatusViewModel" Command="{Binding SwitchCommand}" BorderThickness="1,1,1,1" Background="{DynamicResource btnColor}">
+			<Button.BorderBrush>
+				<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+					<GradientStop Color="Black"/>
+					<GradientStop Color="#FF6171F6" Offset="1"/>
+				</LinearGradientBrush>
+			</Button.BorderBrush>
+		</Button>
+
+	</Grid>
+</Window>

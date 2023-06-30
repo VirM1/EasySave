@@ -1,0 +1,90 @@
+﻿<UserControl x:Class="EasySaveClientPanel.Views.HomeView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:EasySaveClientPanel.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800" Background="White">
+	<Grid>
+		<Label FontSize="36" HorizontalAlignment="Center" Content="Remote Panel" Foreground="{DynamicResource btnColor}"/>
+		<DataGrid Name="InitialBackupList" Margin="209,83,371,107" IsReadOnly="True" 
+                  ItemsSource="{Binding InitialBackupList}"
+                  AutoGenerateColumns="False"
+                  HorizontalContentAlignment="Stretch" 
+                  ColumnWidth="*">
+			<DataGrid.Columns>
+				<DataGridTextColumn Header="Label"  Binding="{Binding Label}" Foreground="Black" IsReadOnly="false"/>
+				<DataGridTextColumn Header="Type"  Binding="{Binding Type}" Foreground="Black" IsReadOnly="false"/>
+			</DataGrid.Columns>
+		</DataGrid>
+		<Button   x:Name="to_launch_btn" Content="←" HorizontalAlignment="Left" Margin="459,198,0,0" 
+                  VerticalAlignment="Top" Background="{DynamicResource btnColor}"  Style="{DynamicResource RoundButton}" 
+                  BorderThickness="1,1,1,1" FontFamily="Bahnschrift SemiBold" Foreground="#FFFBFBFB" Height="29" Width="25"
+                  CommandParameter="{Binding ElementName=LaunchBackupList,Path=SelectedItems}" Command="{Binding MoveToInitialCommand}">
+			<Button.BorderBrush>
+				<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+					<GradientStop Color="Black"/>
+					<GradientStop Color="#FF020E64" Offset="1"/>
+				</LinearGradientBrush>
+			</Button.BorderBrush>
+		</Button>
+		<Button   x:Name="to_initial_btn" Content="→" HorizontalAlignment="Left" 
+                  Margin="494,198,0,0" VerticalAlignment="Top" Background="{DynamicResource btnColor}"  Style="{DynamicResource RoundButton}" 
+                  BorderThickness="1,1,1,1" FontFamily="Bahnschrift SemiBold" Foreground="#FFFBFBFB" Height="29" Width="25"
+                  CommandParameter="{Binding ElementName=InitialBackupList,Path=SelectedItems}" Command="{Binding MoveToLaunchCommand}">
+			<Button.BorderBrush>
+				<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+					<GradientStop Color="Black"/>
+					<GradientStop Color="#FF020E64" Offset="1"/>
+				</LinearGradientBrush>
+			</Button.BorderBrush>
+		</Button>
+		<DataGrid Name="LaunchBackupList" ItemsSource="{Binding LaunchBackupList}" IsReadOnly="True" 
+                  AutoGenerateColumns="False" Margin="539,83,41,107" 
+                  HorizontalContentAlignment="Stretch" 
+                  ColumnWidth="*">
+			<DataGrid.Columns>
+				<DataGridTextColumn Binding="{Binding Label}" Foreground="Black"  Header="Label"  IsReadOnly="false"/>
+				<DataGridTextColumn Binding="{Binding Type}" Foreground="Black"  Header="Type"  IsReadOnly="false"/>
+			</DataGrid.Columns>
+		</DataGrid>
+		<Button   x:Name="lauch_btn" Content="Launch SAV" HorizontalAlignment="Left" Margin="424,369,0,0" 
+                  VerticalAlignment="Top" Background="{DynamicResource btnColor}"  Style="{DynamicResource RoundButton}" BorderThickness="1,1,1,1" 
+                  FontFamily="Bahnschrift SemiBold" Foreground="#FFFBFBFB" Height="29" Width="115"
+                    Command="{Binding LaunchToServCommand}">
+			<Button.BorderBrush>
+				<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+					<GradientStop Color="Black"/>
+					<GradientStop Color="#FF020E64" Offset="1"/>
+				</LinearGradientBrush>
+			</Button.BorderBrush>
+		</Button>
+
+		<Button   x:Name="connect_btn" Content="Connection" HorizontalAlignment="Left" Margin="115,41,0,0" 
+                  VerticalAlignment="Top" Background="{DynamicResource btnColor}"  Style="{DynamicResource RoundButton}" BorderThickness="1,1,1,1" 
+                  FontFamily="Bahnschrift SemiBold" Foreground="#FFFBFBFB" Height="18" Width="80"
+                    Command="{Binding ConectionCommand}">
+			<Button.BorderBrush>
+				<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+					<GradientStop Color="Black"/>
+					<GradientStop Color="#FF020E64" Offset="1"/>
+				</LinearGradientBrush>
+			</Button.BorderBrush>
+		</Button>
+		<Label Content="Ip" HorizontalAlignment="Left" Margin="10,16,0,0" VerticalAlignment="Top" Width="40" Height="30"/>
+		<TextBox HorizontalAlignment="Left" Text="{Binding Ip}"  Margin="10,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Height="18"/>
+		
+		<Button   x:Name="disconnect_btn" Content="Disconnect" HorizontalAlignment="Left" Margin="115,70,0,0" 
+	  VerticalAlignment="Top" Background="{DynamicResource btnColor}"  Style="{DynamicResource RoundButton}" BorderThickness="1,1,1,1" 
+	  FontFamily="Bahnschrift SemiBold" Foreground="#FFFBFBFB" Height="18" Width="80"
+	  Command="{Binding DisconnectCommand}">
+			<Button.BorderBrush>
+				<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+					<GradientStop Color="Black"/>
+					<GradientStop Color="#FF020E64" Offset="1"/>
+				</LinearGradientBrush>
+			</Button.BorderBrush>
+		</Button>
+	</Grid>
+</UserControl>

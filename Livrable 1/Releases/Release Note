@@ -1,0 +1,11 @@
+Release note 1.0
+
+- Le logiciel est une application Console développée en .Net Core
+- Il permet de créer jusqu'à 5 travaux de sauvegarde
+- Chaque travail de sauvegarde est défini par une appellation, un répertoire source, un répertoire cible et un type (complet ou différentiel)
+- Il est utilisable par des utilisateurs anglophones et francophones
+- Les travaux de sauvegarde peuvent être exécutés séquentiellement ou individuellement
+- Les répertoires peuvent être situés sur des disques locaux, externes ou réseaux
+- Un fichier log journalier enregistre en temps réel les actions de chaque travail de sauvegarde
+- Un autre fichier enregistre l'état d'avancement des travaux de sauvegarde
+- Les fichiers sont en format JSON avec des retours à la ligne pour une lecture rapide

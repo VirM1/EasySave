@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <StartupObject>EasySaveConsole.Program</StartupObject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="envFileLibrary\**" />
+    <Compile Remove="logsApp\**" />
+    <Compile Remove="savesApp\**" />
+    <Compile Remove="translationLibrary\**" />
+    <Compile Remove="worksApp\**" />
+    <EmbeddedResource Remove="envFileLibrary\**" />
+    <EmbeddedResource Remove="logsApp\**" />
+    <EmbeddedResource Remove="savesApp\**" />
+    <EmbeddedResource Remove="translationLibrary\**" />
+    <EmbeddedResource Remove="worksApp\**" />
+    <None Remove="envFileLibrary\**" />
+    <None Remove="logsApp\**" />
+    <None Remove="savesApp\**" />
+    <None Remove="translationLibrary\**" />
+    <None Remove="worksApp\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ProjectLibrary\ProjectLibrary.csproj" />
+  </ItemGroup>
+
+</Project>
